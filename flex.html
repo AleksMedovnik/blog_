@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .flex-container{
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+            border: 1px solid black;
+
+            /* дочерние элементы выстраиваются согласно какой-то флекс-модели */
+            display: flex;
+
+            /* направление флексов */
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse;
+            flex-direction: row; /* по умолчанию */
+
+            /* расстояния между флексами и вокруг них вдоль главной оси контейнера */
+            justify-content: flex-start; /* по умолчанию */
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: space-around;
+
+            /* расстояния между флексами и вокруг них поперек главной оси контейнера */
+            align-items: center;
+            align-items: flex-end;
+            align-items: flex-start;
+            align-items: stretch; /* По умолчанию */
+        }
+
+        .flex-elem {
+            background: #3a16ec;
+            width: 50px;
+            height: 50px;
+
+            /* устанавливаем цыфры ровно по центру */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-elem">1</div>
+        <div class="flex-elem">2</div>
+        <div class="flex-elem">3</div>
+        <div class="flex-elem">4</div>
+        <div class="flex-elem">5</div>
+    </div>
+</body>
+</html>
